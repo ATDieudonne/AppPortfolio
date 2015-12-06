@@ -27,18 +27,18 @@ public class MainActivityFragment extends Fragment {
 
         //Create ArrayList of Button objects to populate the listview with
         ArrayList<Button> portAppList = new ArrayList<Button>();
-        portAppList.add(0,new Button(getContext()));
-        portAppList.get(0).setText(R.string.button_text0);
+        portAppList.add(0, new Button(getContext()));
+        portAppList.get(0).setText(getString(R.string.button_text0));
         portAppList.add(1, new Button(getContext()));
-        portAppList.get(1).setText(R.string.button_text1);
+        portAppList.get(1).setText(getString(R.string.button_text1));
         portAppList.add(2, new Button(getContext()));
-        portAppList.get(2).setText(R.string.button_text2);
+        portAppList.get(2).setText(getString(R.string.button_text2));
         portAppList.add(3, new Button(getContext()));
-        portAppList.get(3).setText(R.string.button_text3);
+        portAppList.get(3).setText(getString(R.string.button_text3));
         portAppList.add(4, new Button(getContext()));
-        portAppList.get(4).setText(R.string.button_text4);
+        portAppList.get(4).setText(getString(R.string.button_text4));
         portAppList.add(5, new Button(getContext()));
-        portAppList.get(5).setText(R.string.button_text5);
+        portAppList.get(5).setText(getString(R.string.button_text5));
 
 
         //TIme to create the arrayAdapter
