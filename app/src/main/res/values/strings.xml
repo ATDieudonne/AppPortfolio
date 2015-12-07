@@ -8,4 +8,5 @@
     <string name="button_text3">Build it Bigger</string>
     <string name="button_text4">XYZ Reader</string>
     <string name="button_text5">CAPSTONE: My Own App</string>
+    <string name="button_toast_msg">This button will launch the following app:</string>
 </resources>

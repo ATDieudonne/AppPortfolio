@@ -1,5 +1,6 @@
 package com.example.android.appportfolio;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -8,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -17,6 +19,17 @@ import java.util.ArrayList;
 public class MainActivityFragment extends Fragment {
 
     public MainActivityFragment() {
+    }
+    int duration = Toast.LENGTH_SHORT;
+
+    Toast button_msg = Toast(getContext());
+
+    //Runs when one of the ListView buttons is clicked
+    public void printPurpose (View view){
+        button_msg.setView(view);
+
+        button_msg.setText(R.string.button_toast_msg + getText((Button) view.findViewById(R.id.list_item_portfolio_button) ) );
+        button_msg.show();
     }
 
     @Override
