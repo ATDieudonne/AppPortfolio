@@ -1,13 +1,16 @@
 package com.example.android.appportfolio;
 
+import android.content.Context;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -48,5 +51,27 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    //Runs when one of the ListView buttons is clicked, place in MainActivity
+    // so fragment view can find method.  Can't find method Error otherwise.
+    public void printPurpose(View view){
+        //Declare the current context to use in the Toast constructor
+        Context currentContext = view.getContext();
+        // Declare int and assign variable to determine duration of Toast in toast constructor.
+        int duration = Toast.LENGTH_LONG;
+        //Cast the view as a Button so you can pull the Button text from it. Should be
+        //ok as it will only be the buttons that call this method.
+        Button buttonShell = (Button) view;
+        //Get the text from the button and convert it to a string because it's returned
+        //as a CharSequence
+        String castedText = buttonShell.getText().toString();
+        //Declare Toast with make text constructor using a context, the text you want to display
+        //which in this case is the pre-made text followed by the App Name which also
+        //happens to be the button name and the duration declared above.
+        Toast button_msg = Toast.makeText(currentContext,R.string.button_toast_msg + castedText,duration);
+        //Finally the show function to actually show the Toast
+        button_msg.show();
+
     }
 }
