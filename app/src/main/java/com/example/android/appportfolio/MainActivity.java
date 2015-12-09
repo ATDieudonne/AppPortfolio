@@ -54,7 +54,8 @@ public class MainActivity extends AppCompatActivity {
         //ok as it will only be the buttons that call this method.
         Button buttonShell = (Button) view;
         //Get the text from the button and convert it to a string because it's returned
-        //as a CharSequence
+        //as a CharSequence. Also get the text for the Toast template text to appear
+        //before the app name.
         String castedText = buttonShell.getText().toString();
         String cannedMsg = getString(R.string.button_toast_msg);
         //Declare Toast with make text constructor using a context, the text you want to display
