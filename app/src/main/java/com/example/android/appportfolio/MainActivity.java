@@ -66,10 +66,11 @@ public class MainActivity extends AppCompatActivity {
         //Get the text from the button and convert it to a string because it's returned
         //as a CharSequence
         String castedText = buttonShell.getText().toString();
+        String cannedMsg = getString(R.string.button_toast_msg);
         //Declare Toast with make text constructor using a context, the text you want to display
         //which in this case is the pre-made text followed by the App Name which also
         //happens to be the button name and the duration declared above.
-        Toast button_msg = Toast.makeText(currentContext,R.string.button_toast_msg + castedText,duration);
+        Toast button_msg = Toast.makeText(currentContext,cannedMsg + castedText,duration);
         //Finally the show function to actually show the Toast
         button_msg.show();
 
